@@ -1,0 +1,158 @@
+<nav class="navbar navbar-expand-lg bg-primary">
+  <a class="navbar-brand text-white" href="#">Alden DC3 Support</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+
+<ul class="nav nav-tabs mx-auto text-center">
+  <li class="nav-item" (click)="handleClick($event, 'addUser')">
+    <a class="nav-link active" href="#">Add User</a>
+  </li>
+  <li class="nav-item" (click)="handleClick($event, 'editUser')">
+    <a class="nav-link" href="#">Edit User</a>
+  </li>
+  <li class="nav-item" (click)="handleClick($event, 'addTask')">
+    <a class="nav-link" href="#">Add Task</a>
+  </li>
+  <li class="nav-item" (click)="handleClick($event, 'changeTask')">
+    <a class="nav-link" href="#">Edit Task</a>
+  </li>
+  <li class="nav-item" (click)="handleClick($event, 'getReports')">
+    <a class="nav-link" href="#">Reports</a>
+  </li>
+</ul>
+
+<form class="forms mx-auto text-center w-50 border border-primary p-3 mt-5 mb-5 shadow-lg" id="addUser">
+  <div class="form-group">
+    <label for="firstname">First Name</label>
+    <input type="text" class="form-control text-center" id="firstname" placeholder="first name">
+  </div>
+  <div class="form-group">
+    <label for="lastname">Last Name</label>
+    <input type="text" class="form-control text-center" id="lastname" placeholder="last name">
+  </div>
+  <div class="form-group">
+    <label for="adlogin">AD Login</label>
+    <input type="text" class="form-control text-center" id="adlogin" placeholder="AD login">
+  </div>
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input type="email" class="form-control text-center" id="email" placeholder="Email Address">
+  </div>
+  <div class="form-group">
+    <label for="userrole">User Role</label>
+    <input type="text" class="form-control text-center" id="userrole" placeholder="User Role">
+  </div>
+  <div class="form-group">
+    <label for="userid">ATT User ID</label>
+    <input type="text" class="form-control text-center" id="userid" placeholder="User ID">
+  </div>
+  <button type="submit" class="btn btn-primary">Create User</button>
+</form>
+
+<form class="forms mx-auto text-center w-50 border border-primary p-3 mt-5 mb-5 shadow-lg" id="editUser">
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">AD Login</label>
+    <select multiple class="form-control" id="exampleFormControlSelect2">
+      <option class="text-center">Login 1</option>
+      <option class="text-center">Login 2</option>
+      <option class="text-center">Login 3</option>
+      <option class="text-center">Login 4</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="newuserrole">New Role</label>
+    <select multiple class="form-control" id="newuserrole">
+      <option class="text-center">New Role 1</option>
+      <option class="text-center">New Role 2</option>
+      <option class="text-center">New Role 3</option>
+      <option class="text-center">New Role 4</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Edit Role</button>
+</form>
+
+<form class="forms mx-auto text-center w-50 border border-primary p-3 mt-5 mb-5 shadow-lg" id="addTask">
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">Location Name</label>
+    <select multiple class="form-control" id="exampleFormControlSelect2">
+      <option class="text-center">Birmingham</option>
+      <option class="text-center">Denver</option>
+      <option class="text-center">St. Louis</option>
+      <option class="text-center">Atlanta</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="newuserrole">Project</label>
+    <select multiple class="form-control" id="newuserrole">
+      <option class="text-center">DC3</option>
+      <option class="text-center">XCEL</option>
+      <option class="text-center">ATT</option>
+      <option class="text-center">Other</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">AD Login</label>
+    <select multiple class="form-control" id="exampleFormControlSelect2">
+      <option class="text-center">Login 1</option>
+      <option class="text-center">Login 2</option>
+      <option class="text-center">Login 3</option>
+      <option class="text-center">Login 4</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Add Task Assignment</button>
+</form>
+
+<form class="forms mx-auto text-center w-50 border border-primary p-3 mt-5 mb-5 shadow-lg" id="changeTask">
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">Location Name</label>
+    <select multiple class="form-control" id="exampleFormControlSelect2">
+      <option class="text-center">Birmingham</option>
+      <option class="text-center">Denver</option>
+      <option class="text-center">St. Louis</option>
+      <option class="text-center">Atlanta</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="newuserrole">Project</label>
+    <select multiple class="form-control" id="newuserrole">
+      <option class="text-center">DC3</option>
+      <option class="text-center">XCEL</option>
+      <option class="text-center">ATT</option>
+      <option class="text-center">Other</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">New Status</label>
+    <select multiple class="form-control" id="exampleFormControlSelect2">
+      <option class="text-center">Unfinshed</option>
+      <option class="text-center">Completed</option>
+      <option class="text-center">Backlogged</option>
+      <option class="text-center">New</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Change Task Status</button>
+</form>
+
+<form class="forms mx-auto text-center w-50 border border-primary p-3 mt-5 mb-5 shadow-lg" id="getReports">
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">Location Name</label>
+    <select multiple class="form-control" id="exampleFormControlSelect2">
+      <option class="text-center">Birmingham</option>
+      <option class="text-center">Denver</option>
+      <option class="text-center">St. Louis</option>
+      <option class="text-center">Atlanta</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="newuserrole">Project</label>
+    <select multiple class="form-control" id="newuserrole">
+      <option class="text-center">DC3</option>
+      <option class="text-center">XCEL</option>
+      <option class="text-center">ATT</option>
+      <option class="text-center">Other</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Get Reports</button>
+</form>
